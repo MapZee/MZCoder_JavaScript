@@ -1,0 +1,29 @@
+{
+  "name": "mzcoder",
+  "version": "0.1.0",
+  "description": "MapZee encode/decode logic for JavaScript",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MapZee/MZCoder_JavaScript.git"
+  },
+  "keywords": [
+    "GeoLocation",
+    "MapZee",
+    "Coordinates",
+    "Location"
+  ],
+  "author": "Yegor Sytnyk",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MapZee/MZCoder_JavaScript/issues"
+  },
+  "homepage": "www.mapzee.com",
+  "devDependencies": {
+    "chai": "^3.0.0",
+    "lodash": "^3.9.3"
+  }
+}

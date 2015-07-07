@@ -1,6 +1,6 @@
 {
   "name": "mzcoder",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "MapZee encode/decode logic for JavaScript",
   "main": "app.js",
   "scripts": {

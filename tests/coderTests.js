@@ -124,7 +124,17 @@ describe("Test geo coder", function () {
                 var code = mzCoder.getCode(testCase.lat, testCase.lng);
                 expect(code).to.equal(testCase.code);
             });
-        })
+        });
+
+        it("should test calculating distance between coordinates", function () {
+            var getDistance = mzCoder.getDistance;
+
+            expect(getDistance([48.467990, 34.891180], [48.429505, 35.020269], 10)).to.equal(10450);
+            expect(getDistance([48.467990, 34.891180], [48.429505, 35.020269], 100)).to.equal(10500);
+            expect(getDistance([59.3293371, 13.4877472], [59.3225525, 13.4619422])).to.equal(1649);
+            expect(getDistance([59.3293371, 13.4877472], [59.3225525, 13.4619422], 10)).to.equal(1650);
+            expect(getDistance([52.518611, 13.408056], [55.751667, 37.617778], 100)).to.equal(1610500);
+        });
     });
 });
 

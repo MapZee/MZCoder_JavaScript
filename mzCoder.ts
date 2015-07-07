@@ -262,10 +262,49 @@ var geoCoder = function(){
         return "";
     }
 
+    function getDistance(start, end, accuracy) {
+        accuracy = Math.floor(accuracy) || 1;
+
+        var latStart = toRad(start[0]);
+        var lngStart = toRad(start[1]);
+        var latEnd = toRad(end[0]);
+        var lngEnd = toRad(end[1]);
+
+        var distance =
+            Math.round(
+                Math.acos(
+                    Math.sin(
+                        latEnd
+                    ) *
+                    Math.sin(
+                        latStart
+                    ) +
+                    Math.cos(
+                        latEnd
+                    ) *
+                    Math.cos(
+                        latStart
+                    ) *
+                    Math.cos(
+                        lngStart - lngEnd
+                    )
+                ) * 6378137
+            );
+
+        distance = Math.floor(Math.round(distance/accuracy)*accuracy);
+
+        return distance;
+    }
+
+    function toRad(number) {
+        return number * Math.PI / 180;
+    }
+
     return {
         validateCode: validateCode,
         getCode: getCode,
         decode: decode,
+        getDistance: getDistance,
         //utils methods
         $: {
             alphabet: alphabet,

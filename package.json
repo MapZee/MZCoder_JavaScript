@@ -1,30 +1,33 @@
 {
   "name": "mzcoder",
-  "version": "0.1.1",
-  "description": "MapZee encode/decode logic for JavaScript",
-  "main": "app.js",
+  "version": "0.2.0",
+  "description": "MapZee encoder/decoder",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/MapZee/MZCoder_JavaScript.git"
   },
-  "keywords": [
-    "GeoLocation",
-    "MapZee",
-    "Coordinates",
-    "Location"
-  ],
+  "keywords": ["GeoLocation", "MapZee", "Coordinates", "Location"],
   "author": "Yegor Sytnyk",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/MapZee/MZCoder_JavaScript/issues"
   },
   "homepage": "www.mapzee.com",
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(ts)$",
+    "moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json", "node"]
+  },
   "devDependencies": {
-    "chai": "^3.0.0",
-    "lodash": "^3.9.3",
-    "mocha": "^2.2.5"
+    "@types/jest": "22.2.0",
+    "jest": "22.4.2",
+    "ts-jest": "22.4.1",
+    "typescript": "2.7.2"
   }
 }
